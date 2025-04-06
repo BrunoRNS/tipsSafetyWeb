@@ -5,52 +5,92 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
 }
 
 .navbar {
-    background-color: #000000;
-    padding: 10px 0;
-    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo transparente com uma cor escura */
+    padding: 15px 0;
+    text-align: center;
     position: sticky;
     top: 0;
     width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    z-index: 1000; /* Certifique-se de que a navbar fique sobre o conteúdo */
+    transition: background-color 0.3s ease; /* Transição suave no fundo */
 }
 
 .navbar ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
 }
 
 .navbar ul li {
-    display: inline;
-    margin: 0 15px;
+    position: relative;
 }
 
 .navbar ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 25px; /* Bordas arredondadas */
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
 }
 
 .navbar ul li a:hover {
-    color: #ddd;
+    background-color: #ff5722; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de elevação */
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #ff5722;
+    transition: width 0.3s ease; /* Animação para a linha abaixo */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Linha que aparece ao passar o mouse */
+}
+
+.navbar ul li a.active {
+    background-color: #ff5722;
+    transform: translateY(0);
 }
 
 .content {
-    padding: 20px;
+    padding: 40px 20px;
     margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
 }
 
-h1, h2 {
-    color: #333;
+.content.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* Ajustes no home */
 #home {
-    font-family: 'Arial', 'Helvetica', sans-serif; /* Aspas para fontes com múltiplos nomes */
-    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+   
     margin: 0;
     padding: 0;
-    background: url('./img.jpg');
+    background: url('img.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,14 +100,63 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: rgba(46, 46, 46, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.185);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 30px;
+
+    transition: transform 0.3s ease;
 }
 
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.container a {
+    display: inline-block;
+    background-color: #0066cc;
+   
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.container a:hover {
+    background-color: #004b99;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
