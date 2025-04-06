@@ -46,13 +46,20 @@ h1, h2 {
 }
 
 #home {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #e0e0e0; /* Corrigido para a cor desejada */
+    font-family: 'Arial', 'Helvetica', sans-serif; /* Aspas para fontes com múltiplos nomes */
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    background: url('img.jpg') no-repeat center center fixed; /* Corrigido */
+    background: url('https://curiousbot.org/images/iceberg.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
