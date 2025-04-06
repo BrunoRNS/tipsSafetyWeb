@@ -1,1 +1,50 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar - Sobre e Ajuda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('sobre')">Sobre</a></li>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('ajuda')">Ajuda</a></li>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('home')">Início</a></li>
+        </ul>
+    </nav>
+
+    <div id="ajuda" class="content" style="display: none;">
+        <h2>Ajuda</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta totam necessitatibus ut odit eligendi ipsum delectus vero, laborum officia nihil sint odio blanditiis dicta aliquam eum neque repellendus aut at.</p>
+    </div>
+
+    <div id="sobre" class="content" style="display: none;">
+        <h2>sobre</h2>
+        <img src="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio maiores sit sapiente ad, rerum temporibus repellendus nobis quasi culpa libero asperiores recusandae unde dicta amet inventore qui illo voluptatem!</p>
+    </div>
+
+    <div id="home" class="content" style="display: none;">
+        <div class="container"><h1>bruno</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam error esse eveniet recusandae distinctio. Delectus unde deserunt sequi similique omnis rem, obcaecati consequuntur, doloribus aspernatur corporis provident repellendus alias autem.</p>
+        </div>
+    </div>
+    
+
+    <script>
+        function mostrarSeção(seção) {
+            // Oculta todas as seções
+            const seções = document.querySelectorAll('.content');
+            seções.forEach(function(seção) {
+                seção.style.display = 'none';
+            });
+
+            // Mostra a seção selecionada
+            document.getElementById(seção).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
