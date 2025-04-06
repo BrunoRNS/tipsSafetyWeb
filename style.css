@@ -44,19 +44,17 @@ body {
 h1, h2 {
     color: #333;
 }
-.home {
-    font-family: Arial, Helvetica, sans-serif
+
+#home {
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #e0e0e0; /* Corrigido para a cor desejada */
     margin: 0;
     padding: 0;
-    background: url('img.jpg');
+    background: url('img.jpg') no-repeat center center fixed; /* Corrigido */
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #e0e0e0;
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -65,3 +63,4 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
