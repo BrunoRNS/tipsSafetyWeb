@@ -50,7 +50,7 @@ h1, h2 {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
-    background: url('https://curiousbot.org/images/iceberg.png');
+    background: url('./img.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
