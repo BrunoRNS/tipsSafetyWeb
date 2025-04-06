@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar - Sobre e Ajuda</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li><a href="javascript:void(0);" onclick="mostrarSeção('sobre')">Sobre</a></li>
             <li><a href="javascript:void(0);" onclick="mostrarSeção('ajuda')">Ajuda</a></li>
-            <li><a href="javascript:void(0);" onclick="mostrarSeção('inicio')">Início</a></li>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('home')">Início</a></li>
         </ul>
     </nav>
 
@@ -22,23 +21,16 @@
     </div>
 
     <div id="sobre" class="content" style="display: none;">
-        <h2>sobre</h2>
-        <img src="">
+        <h2>SOBRE</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio maiores sit sapiente ad, rerum temporibus repellendus nobis quasi culpa libero asperiores recusandae unde dicta amet inventore qui illo voluptatem!</p>
     </div>
 
-    <div id="inicio" class="content" style="display: none;">
-        <h2>inicio</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio maiores sit sapiente ad, rerum temporibus repellendus nobis quasi culpa libero asperiores recusandae unde dicta amet inventore qui illo voluptatem!</p>
-    </div>
-
-    <div class="home" style="display: none;">
+    <div id="home" class="content" style="display: block;">
         <div class="container">
-        <h1>bruno</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam error esse eveniet recusandae distinctio. Delectus unde deserunt sequi similique omnis rem, obcaecati consequuntur, doloribus aspernatur corporis provident repellendus alias autem.</p>
+            <h1>Bruno</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam error esse eveniet recusandae distinctio. Delectus unde deserunt sequi similique omnis rem, obcaecati consequuntur, doloribus aspernatur corporis provident repellendus alias autem.</p>
         </div>
     </div>
-    
 
     <script>
         function mostrarSeção(seção) {
@@ -47,12 +39,9 @@
             seções.forEach(function(seção) {
                 seção.style.display = 'none';
             });
-            if (document.getElementById(seção).style.display === 'block') {
-                seção.style.display = 'none';
-            } else {
-                // Mostra a seção selecionada
-                document.getElementById(seção).style.display = 'block';
-            }
+
+            // Mostra a seção selecionada
+            document.getElementById(seção).style.display = 'block';
         }
     </script>
 </body>
