@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar - Sobre e Ajuda</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
@@ -25,24 +25,15 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio maiores sit sapiente ad, rerum temporibus repellendus nobis quasi culpa libero asperiores recusandae unde dicta amet inventore qui illo voluptatem!</p>
     </div>
 
-    <div id="home" class="content" style="display: block;">
+    <div id="home" class="content" style="display: none;">
         <div class="container">
-            <h1 class="title">Be smart on deep web</h1>
-            
-            <h2 class="topic-title">First of all, avoid deep web</h2>
-            <p class="topic-text">Is always better to avoid problems then fighting them. So, only open deep web if you have no more options.</p>
-            
-            <h2 class="topic-title">Use VPN</h2>
-            <p class="topic-text">When opening not trustable sites, use vpn, its a security shield against hackers that try to get you IP to take your passwords.</p>
-            
-            <h2 class="topic-title">Never let the untrustable site give you notifications</h2>
-            <p class="topic-text">They will spam you, say that your device is infected when it is not, and open pop ups that make you download things that you don’t want and make your device slow.</p>
-            
-            <h2 class="topic-title">Use Virtual Machine</h2>
-            <p class="topic-text">Don’t donwload executables or compressed files (exe, zip, tar.gz, .7z) from not trustable websites, they usually come with a special virus for you, so download them on a virtual machine, access this site for more information: <a href="https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/">How to create and use Virtual Machines</a></p>
-            
-            <h2 class="topic-title">Do not send personal information to untrustable sites</h2>
-            <p class="topic-text">It is very important to not share personal information in dangerous websites, they can sell those informations.</p>
+            <h1>Be Smart on the Deep Web </h1>
+            <p>Avoid the Deep Web unless necessary to prevent risks.</p>
+            <p>Use VPN for added security when browsing untrustworthy sites.</p>
+            <p>Disable Notifications from suspicious sites to avoid spam and malicious pop-ups.</p>
+            <p>Disable Notifications from suspicious sites to avoid spam and malicious pop-ups.</p>
+            <p>Don't Share Personal Info on unsafe websites, as it could be misused.</p>
+            <a href="#">Saiba Mais</a>
         </div>
     </div>
 
@@ -52,10 +43,15 @@
             const seções = document.querySelectorAll('.content');
             seções.forEach(function(seção) {
                 seção.style.display = 'none';
+                seção.classList.remove('show'); // Remove animações anteriores
             });
 
             // Mostra a seção selecionada
-            document.getElementById(seção).style.display = 'block';
+            const novaSeção = document.getElementById(seção);
+            novaSeção.style.display = 'block';
+            setTimeout(() => {
+                novaSeção.classList.add('show'); // Adiciona animação de fade-in e slide-up
+            }, 100); // Aguarda 100ms para aplicar a animação
         }
     </script>
 </body>
