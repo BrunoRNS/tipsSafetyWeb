@@ -74,7 +74,7 @@ body {
 
 .content {
     padding: 40px 20px;
-    margin: 20px;
+    margin: 0px;
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease;
@@ -151,7 +151,7 @@ p {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .container a:hover {
