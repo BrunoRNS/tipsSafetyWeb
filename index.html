@@ -1,57 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar - Sobre e Ajuda</title>
+    <title>Be smart on deep web</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="javascript:void(0);" onclick="mostrarSeção('sobre')">Sobre</a></li>
-            <li><a href="javascript:void(0);" onclick="mostrarSeção('ajuda')">Ajuda</a></li>
-            <li><a href="javascript:void(0);" onclick="mostrarSeção('home')">Início</a></li>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('sobre')">About</a></li>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('ajuda')">Help</a></li>
+            <li><a href="javascript:void(0);" onclick="mostrarSeção('home')">Home</a></li>
         </ul>
     </nav>
 
     <div id="ajuda" class="content" style="display: none;">
-        <h2>Ajuda</h2>
+        <h2>Help</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta totam necessitatibus ut odit eligendi ipsum delectus vero, laborum officia nihil sint odio blanditiis dicta aliquam eum neque repellendus aut at.</p>
     </div>
 
     <div id="sobre" class="content" style="display: none;">
-        <h2>SOBRE</h2>
+        <h2>About</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio maiores sit sapiente ad, rerum temporibus repellendus nobis quasi culpa libero asperiores recusandae unde dicta amet inventore qui illo voluptatem!</p>
     </div>
 
     <div id="home" class="content" style="display: none;">
         <div class="container">
             <h1>Be Smart on the Deep Web </h1>
-            <p>Avoid the Deep Web unless necessary to prevent risks.</p>
-            <p>Use VPN for added security when browsing untrustworthy sites.</p>
-            <p>Disable Notifications from suspicious sites to avoid spam and malicious pop-ups.</p>
-            <p>Disable Notifications from suspicious sites to avoid spam and malicious pop-ups.</p>
-            <p>Don't Share Personal Info on unsafe websites, as it could be misused.</p>
-            <a href="#">Saiba Mais</a>
+            <p>Find out how to navigate safely on deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
+            <a href="#">Learn More</a>
         </div>
     </div>
 
     <script>
         function mostrarSeção(seção) {
-            // Oculta todas as seções
             const seções = document.querySelectorAll('.content');
             seções.forEach(function(seção) {
                 seção.style.display = 'none';
-                seção.classList.remove('show'); // Remove animações anteriores
+                seção.classList.remove('show');
             });
 
-            // Mostra a seção selecionada
             const novaSeção = document.getElementById(seção);
             novaSeção.style.display = 'block';
             setTimeout(() => {
-                novaSeção.classList.add('show'); // Adiciona animação de fade-in e slide-up
-            }, 100); // Aguarda 100ms para aplicar a animação
+                novaSeção.classList.add('show');
+            }, 100);
         }
     </script>
 </body>
