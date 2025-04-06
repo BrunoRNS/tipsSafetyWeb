@@ -1,26 +1,31 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+/* Universal Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Style */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
     overflow-x: hidden;
 }
 
+/* Navbar */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo transparente com uma cor escura */
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent dark background */
     padding: 15px 0;
     text-align: center;
     position: sticky;
     top: 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave */
-    z-index: 1000; /* Certifique-se de que a navbar fique sobre o conteúdo */
-    transition: background-color 0.3s ease; /* Transição suave no fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    z-index: 1000; /* Ensure navbar stays above content */
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .navbar ul {
@@ -41,14 +46,14 @@ body {
     font-size: 18px;
     font-weight: bold;
     padding: 12px 20px;
-    border-radius: 25px; /* Bordas arredondadas */
+    border-radius: 25px; /* Rounded corners */
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
 .navbar ul li a:hover {
-    background-color: #ff5722; /* Cor de fundo ao passar o mouse */
-    transform: translateY(-5px); /* Efeito de elevação */
+    background-color: #ff5722; /* Background color on hover */
+    transform: translateY(-5px); /* Slight upward movement on hover */
 }
 
 .navbar ul li a::after {
@@ -60,16 +65,11 @@ body {
     width: 0;
     height: 3px;
     background-color: #ff5722;
-    transition: width 0.3s ease; /* Animação para a linha abaixo */
+    transition: width 0.3s ease; /* Animated underline effect */
 }
 
 .navbar ul li a:hover::after {
-    width: 100%; /* Linha que aparece ao passar o mouse */
-}
-
-.navbar ul li a.active {
-    background-color: #ff5722;
-    transform: translateY(0);
+    width: 100%; /* Underline appears on hover */
 }
 
 .content {
@@ -85,10 +85,9 @@ body {
     transform: translateY(0);
 }
 
-/* Ajustes no home */
+/* Home Section */
 #home {
     font-family: "Teko", sans-serif;
-   
     margin: 0;
     padding: 0;
     background: url('img.jpg');
@@ -145,7 +144,6 @@ p {
 .container a {
     display: inline-block;
     background-color: #0066cc;
-   
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 5px;
@@ -156,8 +154,34 @@ p {
 
 .container a:hover {
     background-color: #004b99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 .container:hover {
     transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container a {
+        padding: 10px 20px;
+    }
 }
