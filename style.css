@@ -1,1 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #000000;
+    padding: 10px 0;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+.content {
+    padding: 20px;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+.home {
+    font-family: Arial, Helvetica, sans-serif
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: url('imagem em fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #e0e0e0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(46, 46, 46, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
