@@ -11,4 +11,4 @@ Use Virtual Machine
 - Don’t donwload executables or compressed files (exe, zip, tar.gz, .7z) from not trustable websites, they usually come with a special virus for you, so download them on a virtual machine, access this site for more information: https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/ 
 
 Do not send personal information to untrustable sites
-- Do not send 
+- It is very important to not share personal information in dangerous websites, they can sell those informations.
