@@ -34,17 +34,17 @@
     </div>
 
     <script>
-        function mostrarSeção(seção) {
-            const seções = document.querySelectorAll('.content');
-            seções.forEach(function(seção) {
-                seção.style.display = 'none';
-                seção.classList.remove('show');
+        function mostrarSecao(secao) {
+            const secoes = document.querySelectorAll('.content');
+            secoes.forEach(function(secao) {
+                secao.style.display = 'none';
+                secao.classList.remove('show');
             });
 
-            const novaSeção = document.getElementById(seção);
-            novaSeção.style.display = 'block';
+            const novaSecao = document.getElementById(secao);
+            novaSecao.style.display = 'block';
             setTimeout(() => {
-                novaSeção.classList.add('show');
+                novaSecao.classList.add('show');
             }, 100);
         }
     </script>
