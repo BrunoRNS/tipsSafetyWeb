@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Smart on the Deep Web</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Be Smart on the Deep Web</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
-        <ul>
-            <li><a href="javascript:void(0);" onclick="mostrarSecao('sobre')">About</a></li>
-            <li><a href="javascript:void(0);" onclick="mostrarSecao('home')">Home</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home" id="goHome">Home</a></li>
+        <li><a href="#tips" id="goTips">Tips</a></li>
+        <li><button id="themeToggle">🌙</button></li>
+      </ul>
     </nav>
-
-    <!-- Content Sections -->
-    <div id="sobre" class="content" style="display: none;">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum optio maiores sit sapiente ad, rerum temporibus repellendus nobis quasi culpa libero asperiores recusandae unde dicta amet inventore qui illo voluptatem!</p>
-    </div>
-
+  
+ 
     <div id="home" class="content" style="display: block;">
-        <div class="container">
-            <h1>Be Smart on the Deep Web</h1>
-            <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
-            <a href="#s">Learn More</a>
-        </div>
-        <div class="s">
-            <div class="container"></div>
-                <h1 class="title">Be smart on deep web</h1>
-                
-                <h2 class="topic-title">First of all, avoid deep web</h2>
-                <p class="topic-text">Is always better to avoid problems then fighting them. So, only open deep web if you have no more options.</p>
-                
-                <h2 class="topic-title">Use VPN</h2>
-                <p class="topic-text">When opening not trustable sites, use vpn, its a security shield against hackers that try to get you IP to take your passwords.</p>
-                
-                <h2 class="topic-title">Never let the untrustable site give you notifications</h2>
-                <p class="topic-text">They will spam you, say that your device is infected when it is not, and open pop ups that make you download things that you don’t want and make your device slow.</p>
-                
-                <h2 class="topic-title">Use Virtual Machine</h2>
-                <p class="topic-text">Don’t donwload executables or compressed files (exe, zip, tar.gz, .7z) from not trustable websites, they usually come with a special virus for you, so download them on a virtual machine. </p>
-                
-                <h2 class="topic-title">Do not send personal information to untrustable sites</h2>
-                <p class="topic-text">It is very important to not share personal information in dangerous websites, they can sell those informations.</p> 
-            </div>
-        </div>
+      <div class="container">
+          <h1>Be Smart on the Deep Web</h1>
+          <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
+          <a href="#tips" id="learnMoreBtn" class="learn-more">Learn More</a>
+      </div>
     </div>
-
+  
+   
+    <div id="tips" class="content" style="display: none;">
+      <div class="tips-container">
+        <h2 class="tips-title">Be Smart on the Deep Web</h2>
+  
+        <div class="tip">
+          <div class="tip-icon">📌</div>
+          <div>
+            <div class="tip-title">Tip 1 – Avoid the Deep Web</div>
+            <p>It's always better to avoid problems than to fight them. Access only if necessary.</p>
+          </div>
+        </div>
+  
+        <div class="tip">
+          <div class="tip-icon">🔒</div>
+          <div>
+            <div class="tip-title">Tip 2 – Use a VPN</div>
+            <p>A VPN acts as a shield against hackers trying to get your IP.</p>
+          </div>
+        </div>
+  
+        <div class="tip">
+          <div class="tip-icon">🚫</div>
+          <div>
+            <div class="tip-title">Tip 3 – Block Notifications</div>
+            <p>Malicious sites send fake virus alerts and pop-ups. Avoid them.</p>
+          </div>
+        </div>
+  
+        <div class="tip">
+          <div class="tip-icon">💻</div>
+          <div>
+            <div class="tip-title">Tip 4 – Use a Virtual Machine</div>
+            <p>Always test suspicious files in a VM to avoid infecting your system.</p>
+          </div>
+        </div>
+  
+        <div class="tip">
+          <div class="tip-icon">🙅‍♂️</div>
+          <div>
+            <div class="tip-title">Tip 5 – Never Share Personal Info</div>
+            <p>Do not give your data to unknown or unsafe websites.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
     <script>
-        function mostrarSecao(secao) {
-            const secoes = document.querySelectorAll('.content');
-            secoes.forEach(function(secao) {
-                secao.style.display = 'none';
-                secao.classList.remove('show');
-            });
-
-            const novaSecao = document.getElementById(secao);
-            novaSecao.style.display = 'block';
-            setTimeout(() => {
-                novaSecao.classList.add('show');
-            }, 100);
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("themeToggle");
+        const learnMoreBtn = document.getElementById("learnMoreBtn");
+        const homeLink = document.getElementById("goHome");
+        const tipsLink = document.getElementById("goTips");
+  
+        const homeSection = document.getElementById("home");
+        const tipsSection = document.getElementById("tips");
+        const body = document.body;
+  
+        if (localStorage.getItem("theme") === "dark") {
+          body.classList.add("dark-mode");
+          themeToggle.textContent = "☀️";
         }
+  
+        themeToggle.addEventListener("click", () => {
+          body.classList.toggle("dark-mode");
+          const isDark = body.classList.contains("dark-mode");
+          themeToggle.textContent = isDark ? "☀️" : "🌙";
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+  
+        const showTips = (e) => {
+          e.preventDefault();
+          homeSection.style.display = "none";
+          tipsSection.style.display = "block";
+          tipsSection.scrollIntoView({ behavior: "smooth" });
+        };
+  
+        const showHome = (e) => {
+          e.preventDefault();
+          tipsSection.style.display = "none";
+          homeSection.style.display = "flex"; // ou block, dependendo do CSS
+          homeSection.scrollIntoView({ behavior: "smooth" });
+        };
+  
+        learnMoreBtn.addEventListener("click", showTips);
+        tipsLink.addEventListener("click", showTips);
+        homeLink.addEventListener("click", showHome);
+      });
     </script>
-
-</body>
+  
+  </body>
+  
 </html>
