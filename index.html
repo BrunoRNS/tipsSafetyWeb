@@ -47,9 +47,12 @@
             seções.forEach(function(seção) {
                 seção.style.display = 'none';
             });
-
-            // Mostra a seção selecionada
-            document.getElementById(seção).style.display = 'block';
+            if (document.getElementById(seção).style.display === 'block') {
+                seção.style.display = 'none';
+            } else {
+                // Mostra a seção selecionada
+                document.getElementById(seção).style.display = 'block';
+            }
         }
     </script>
 </body>
