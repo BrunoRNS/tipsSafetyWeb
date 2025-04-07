@@ -451,3 +451,85 @@ body:not(.dark-mode) #social-midia .g {
   text-decoration: underline; 
   
 }
+.about {
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 900px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about .texto {
+  flex: 1;
+}
+
+.about .texto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
+.about .texto p {
+  font-size: 16px;
+  color: #333;
+}
+
+.about .foto {
+  flex: 1;
+  text-align: center;
+}
+
+.about .foto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 122px;
+}
+
+
+body.dark-mode .about {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+body.dark-mode .about .texto p {
+  color: #ccc;
+}
+
+body.dark-mode .about .texto h2 {
+  color: #00bcd4;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .about .texto,
+  .about .foto {
+    flex: unset;
+    width: 100%;
+  }
+
+  .about .texto h2 {
+    font-size: 22px;
+  }
+
+  .about .texto p {
+    font-size: 15px;
+  }
+
+  .about .foto img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
