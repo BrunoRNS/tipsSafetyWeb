@@ -4,27 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Be Smart on the Deep Web</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <nav class="navbar">
     <ul>
-      <li><a href="#home" id="goHome">Home</a></li>
-      <li><a href="#tips" id="goTips">Tips</a></li>
+      <li><a href="#" id="goHome">Home</a></li>
+      <li><a href="#" id="goTips">Tips</a></li>
       <li><button id="themeToggle">🌙</button></li>
     </ul>
   </nav>
 
-  <div id="home" class="content" style="display: block;">
+  <div id="home" class="content">
     <div class="container">
       <h1>Be Smart on the Deep Web</h1>
       <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
-      <a href="#tips" id="learnMoreBtn" class="learn-more">Learn More</a>
+      <a href="#" id="learnMoreBtn" class="learn-more">Learn More</a>
     </div>
   </div>
 
-  <div id="tips" class="content" style="display: none;">
+  <div id="tips" class="content hidden">
     <div class="tips-container">
       <h2 class="tips-title">Be Smart on the Deep Web</h2>
 
@@ -95,15 +95,15 @@
 
       const showTips = (e) => {
         e.preventDefault();
-        homeSection.style.display = "none";
-        tipsSection.style.display = "block";
+        homeSection.classList.add("hidden");
+        tipsSection.classList.remove("hidden");
         tipsSection.scrollIntoView({ behavior: "smooth" });
       };
 
       const showHome = (e) => {
         e.preventDefault();
-        tipsSection.style.display = "none";
-        homeSection.style.display = "flex";
+        tipsSection.classList.add("hidden");
+        homeSection.classList.remove("hidden");
         homeSection.scrollIntoView({ behavior: "smooth" });
       };
 
@@ -115,3 +115,4 @@
 
 </body>
 </html>
+
