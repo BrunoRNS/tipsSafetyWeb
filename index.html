@@ -4,118 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Be Smart on the Deep Web</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home" id="goHome">Home</a></li>
-        <li><a href="#tips" id="goTips">Tips</a></li>
-        <li><button id="themeToggle">🌙</button></li>
-      </ul>
-    </nav>
-  
- 
-    <div id="home" class="content" style="display: block;">
-      <div class="container">
-          <h1>Be Smart on the Deep Web</h1>
-          <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
-          <a href="#tips" id="learnMoreBtn" class="learn-more">Learn More</a>
-      </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home" id="goHome">Home</a></li>
+      <li><a href="#tips" id="goTips">Tips</a></li>
+      <li><button id="themeToggle">🌙</button></li>
+    </ul>
+  </nav>
+
+  <div id="home" class="content" style="display: block;">
+    <div class="container">
+        <h1>Be Smart on the Deep Web</h1>
+        <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
+        <a href="#tips" id="learnMoreBtn" class="learn-more">Learn More</a>
     </div>
-  
-   
-    <div id="tips" class="content" style="display: none;">
-      <div class="tips-container">
-        <h2 class="tips-title">Be Smart on the Deep Web</h2>
-  
-        <div class="tip">
-          <div class="tip-icon">📌</div>
-          <div>
-            <div class="tip-title">Tip 1 – Avoid the Deep Web</div>
-            <p>It's always better to avoid problems than to fight them. Access only if necessary.</p>
-          </div>
+  </div>
+
+  <div id="tips" class="content" style="display: none;">
+    <div class="tips-container">
+      <h2 class="tips-title">Be Smart on the Deep Web</h2>
+
+      <div class="tip">
+        <div class="tip-icon">📌</div>
+        <div>
+          <div class="tip-title">Tip 1 – Avoid the Deep Web</div>
+          <p>It's always better to avoid problems than to fight them. Access only if necessary.</p>
         </div>
-  
-        <div class="tip">
-          <div class="tip-icon">🔒</div>
-          <div>
-            <div class="tip-title">Tip 2 – Use a VPN</div>
-            <p>A VPN acts as a shield against hackers trying to get your IP.</p>
-          </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">🔒</div>
+        <div>
+          <div class="tip-title">Tip 2 – Use a VPN</div>
+          <p>A VPN acts as a shield against hackers trying to get your IP.</p>
         </div>
-  
-        <div class="tip">
-          <div class="tip-icon">🚫</div>
-          <div>
-            <div class="tip-title">Tip 3 – Block Notifications</div>
-            <p>Malicious sites send fake virus alerts and pop-ups. Avoid them.</p>
-          </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">🚫</div>
+        <div>
+          <div class="tip-title">Tip 3 – Block Notifications</div>
+          <p>Malicious sites send fake virus alerts and pop-ups. Avoid them.</p>
         </div>
-  
-        <div class="tip">
-          <div class="tip-icon">💻</div>
-          <div>
-            <div class="tip-title">Tip 4 – Use a Virtual Machine</div>
-            <p>Always test suspicious files in a VM to avoid infecting your system.</p>
-          </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">💻</div>
+        <div>
+          <div class="tip-title">Tip 4 – Use a Virtual Machine</div>
+          <p>Always test suspicious files in a VM to avoid infecting your system.</p>
         </div>
-  
-        <div class="tip">
-          <div class="tip-icon">🙅‍♂️</div>
-          <div>
-            <div class="tip-title">Tip 5 – Never Share Personal Info</div>
-            <p>Do not give your data to unknown or unsafe websites.</p>
-          </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">🙅‍♂️</div>
+        <div>
+          <div class="tip-title">Tip 5 – Never Share Personal Info</div>
+          <p>Do not give your data to unknown or unsafe websites.</p>
         </div>
       </div>
     </div>
-  
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const themeToggle = document.getElementById("themeToggle");
-        const learnMoreBtn = document.getElementById("learnMoreBtn");
-        const homeLink = document.getElementById("goHome");
-        const tipsLink = document.getElementById("goTips");
-  
-        const homeSection = document.getElementById("home");
-        const tipsSection = document.getElementById("tips");
-        const body = document.body;
-  
-        if (localStorage.getItem("theme") === "dark") {
-          body.classList.add("dark-mode");
-          themeToggle.textContent = "☀️";
-        }
-  
-        themeToggle.addEventListener("click", () => {
-          body.classList.toggle("dark-mode");
-          const isDark = body.classList.contains("dark-mode");
-          themeToggle.textContent = isDark ? "☀️" : "🌙";
-          localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
-  
-        const showTips = (e) => {
-          e.preventDefault();
-          homeSection.style.display = "none";
-          tipsSection.style.display = "block";
-          tipsSection.scrollIntoView({ behavior: "smooth" });
-        };
-  
-        const showHome = (e) => {
-          e.preventDefault();
-          tipsSection.style.display = "none";
-          homeSection.style.display = "flex"; // ou block, dependendo do CSS
-          homeSection.scrollIntoView({ behavior: "smooth" });
-        };
-  
-        learnMoreBtn.addEventListener("click", showTips);
-        tipsLink.addEventListener("click", showTips);
-        homeLink.addEventListener("click", showHome);
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const themeToggle = document.getElementById("themeToggle");
+      const learnMoreBtn = document.getElementById("learnMoreBtn");
+      const homeLink = document.getElementById("goHome");
+      const tipsLink = document.getElementById("goTips");
+
+      const homeSection = document.getElementById("home");
+      const tipsSection = document.getElementById("tips");
+      const body = document.body;
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        themeToggle.textContent = "☀️";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const isDark = body.classList.contains("dark-mode");
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
       });
-    </script>
-  
-  </body>
-  
+
+      const showTips = (e) => {
+        e.preventDefault();
+        homeSection.style.display = "none";
+        tipsSection.style.display = "block";
+        tipsSection.scrollIntoView({ behavior: "smooth" });
+      };
+
+      const showHome = (e) => {
+        e.preventDefault();
+        tipsSection.style.display = "none";
+        homeSection.style.display = "flex";
+        homeSection.scrollIntoView({ behavior: "smooth" });
+      };
+
+      learnMoreBtn.addEventListener("click", showTips);
+      tipsLink.addEventListener("click", showTips);
+      homeLink.addEventListener("click", showHome);
+    });
+  </script>
+
+</body>
 </html>
