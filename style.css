@@ -1,117 +1,235 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Be Smart on the Deep Web</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home" id="goHome">Home</a></li>
-      <li><a href="#tips" id="goTips">Tips</a></li>
-      <li><button id="themeToggle">🌙</button></li>
-    </ul>
-  </nav>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  <div id="home" class="content" style="display: block;">
-    <div class="container">
-        <h1>Be Smart on the Deep Web</h1>
-        <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
-        <a href="#tips" id="learnMoreBtn" class="learn-more">Learn More</a>
-    </div>
-  </div>
+.hidden {
+  display: none !important;
+}
 
-  <div id="tips" class="content" style="display: none;">
-    <div class="tips-container">
-      <h2 class="tips-title">Be Smart on the Deep Web</h2>
+.navbar {
+  background-color: #ffffff;
+  color: #222;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-      <div class="tip">
-        <div class="tip-icon">📌</div>
-        <div>
-          <div class="tip-title">Tip 1 – Avoid the Deep Web</div>
-          <p>It's always better to avoid problems than to fight them. Access only if necessary.</p>
-        </div>
-      </div>
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
-      <div class="tip">
-        <div class="tip-icon">🔒</div>
-        <div>
-          <div class="tip-title">Tip 2 – Use a VPN</div>
-          <p>A VPN acts as a shield against hackers trying to get your IP.</p>
-        </div>
-      </div>
+.navbar ul li a,
+.navbar ul li button {
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-      <div class="tip">
-        <div class="tip-icon">🚫</div>
-        <div>
-          <div class="tip-title">Tip 3 – Block Notifications</div>
-          <p>Malicious sites send fake virus alerts and pop-ups. Avoid them.</p>
-        </div>
-      </div>
+.navbar ul li a:hover,
+.navbar ul li button:hover {
+  background-color: #0077cc;
+  color: white;
+  transform: translateY(-2px);
+}
 
-      <div class="tip">
-        <div class="tip-icon">💻</div>
-        <div>
-          <div class="tip-title">Tip 4 – Use a Virtual Machine</div>
-          <p>Always test suspicious files in a VM to avoid infecting your system.</p>
-        </div>
-      </div>
+.content {
+  padding: 60px 20px;
+  background: #f5f7fa;
+}
 
-      <div class="tip">
-        <div class="tip-icon">🙅‍♂️</div>
-        <div>
-          <div class="tip-title">Tip 5 – Never Share Personal Info</div>
-          <p>Do not give your data to unknown or unsafe websites.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+#home {
+  margin: 0;
+  background: url('img.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1s ease-out;
+}
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const themeToggle = document.getElementById("themeToggle");
-      const learnMoreBtn = document.getElementById("learnMoreBtn");
-      const homeLink = document.getElementById("goHome");
-      const tipsLink = document.getElementById("goTips");
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
-      const homeSection = document.getElementById("home");
-      const tipsSection = document.getElementById("tips");
-      const body = document.body;
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.185);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.8;
+  transition: transform 0.3s ease;
+}
 
-      if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        themeToggle.textContent = "☀️";
-      }
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
 
-      themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        const isDark = body.classList.contains("dark-mode");
-        themeToggle.textContent = isDark ? "☀️" : "🌙";
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-      });
+p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 
-      const showTips = (e) => {
-        e.preventDefault();
-        homeSection.style.display = "none";
-        tipsSection.style.display = "block";
-        tipsSection.scrollIntoView({ behavior: "smooth" });
-      };
+.container a {
+  display: inline-block;
+  background-color: #0066cc;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
 
-      const showHome = (e) => {
-        e.preventDefault();
-        tipsSection.style.display = "none";
-        homeSection.style.display = "flex";
-        homeSection.scrollIntoView({ behavior: "smooth" });
-      };
+.container a:hover {
+  background-color: #004b99;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
 
-      learnMoreBtn.addEventListener("click", showTips);
-      tipsLink.addEventListener("click", showTips);
-      homeLink.addEventListener("click", showHome);
-    });
-  </script>
+.container:hover {
+  transform: scale(1.05);
+}
 
-</body>
-</html>
+.tips-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tips-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: 'Arial Black', sans-serif;
+  color: #0077cc;
+}
+
+.tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #eef6fc;
+  border-left: 6px solid #0077cc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.tip:hover {
+  transform: scale(1.02);
+}
+
+.tip-icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.tip-title {
+  font-size: 22px;
+  color: #005fa3;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar ul li a,
+body.dark-mode .navbar ul li button {
+  color: #ffffff;
+}
+
+body.dark-mode .navbar ul li a:hover,
+body.dark-mode .navbar ul li button:hover {
+  background-color: #333333;
+}
+
+body.dark-mode .content {
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+}
+
+body.dark-mode .container {
+  background-color: rgba(30, 30, 30, 0.85);
+  color: #f5f5f5;
+}
+
+body.dark-mode .tips-container {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+
+body.dark-mode .tip {
+  background-color: #2c2c2c;
+  border-left-color: #00bcd4;
+}
+
+body.dark-mode .tip-title,
+body.dark-mode .tips-title,
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #00bcd4;
+}
+
+body.dark-mode p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .container a {
+  background-color: #00bcd4;
+  color: #000;
+}
+
+body.dark-mode .container a:hover {
+  background-color: #0097a7;
+  color: #fff;
+}
