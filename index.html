@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Be Smart on the Deep Web</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
   <nav class="navbar">
     <ul>
       <li><a href="#" id="goHome">Home</a></li>
-      <li><a href="#" id="goAbout">About</a></li>
+      <li><a href="#" id="goAbout">about</a></li>
       <li><button id="themeToggle">🌙</button></li>
     </ul>
   </nav>
@@ -25,69 +25,121 @@
     </div>
   </div>
 
-  <div id="about" class="content hidden">
+  <div id="s" class="content" style="display: none;">
     <div class="container">
-      <h2>About</h2>
-      <p>Coming soon...</p>
+      <h2>Introduction</h2>
+      <p>This section explains the basics before diving into the deep web tips. Understanding the risks is the first step to staying safe online.</p>
+      <a href="#" id="toTips" class="learn-more">See Tips</a>
     </div>
   </div>
-<main>
-  <footer>
-    <div  id="eu1">
-        <div id="eu2">
-            <h1>deep web</h1>
-            <p>the joob</p>
-            <div id="social-midia">
-                <a href="#" class="g" id="github">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="#" class="g" id="face">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#" class="g" id="ista">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
-         <div id="blok">
-            <ul class="list">
-                <li>
-                    <h3>about the creators</h3>
-                </li>
-                <li>
-                    <a href="#" class="f-link">bruno</a>
-                </li>
-                <li>
-                    <a href="#" class="f-link">luis</a>
-                </li>
-            </ul>
-         </div>
-        </div>
 
+  <section id="about" class="content" style="display:none;">
+    <h1>Sobre o Projeto</h1>
+    <p>Aqui você pode colocar informações sobre o site, os criadores, etc.</p>
+  </section>
+  
+  <div id="tips" class="content" style="display: none;">
+    <div class="tips-container">
+      <h2 class="tips-title">Be Smart on the Deep Web</h2>
+
+      <div class="tip">
+        <div class="tip-icon">📌</div>
+        <div>
+          <div class="tip-title">Tip 1 – Avoid the Deep Web</div>
+          <p>It's always better to avoid problems than to fight them. Access only if necessary.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">🔒</div>
+        <div>
+          <div class="tip-title">Tip 2 – Use a VPN</div>
+          <p>A VPN acts as a shield against hackers trying to get your IP.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">🚫</div>
+        <div>
+          <div class="tip-title">Tip 3 – Block Notifications</div>
+          <p>Malicious sites send fake virus alerts and pop-ups. Avoid them.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">💻</div>
+        <div>
+          <div class="tip-title">Tip 4 – Use a Virtual Machine</div>
+          <p>Always test suspicious files in a VM to avoid infecting your system.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <div class="tip-icon">🙅‍♂️</div>
+        <div>
+          <div class="tip-title">Tip 5 – Never Share Personal Info</div>
+          <p>Do not give your data to unknown or unsafe websites.</p>
+        </div>
+      </div>
     </div>
-    <div id="COPY">
-        &#169
-        2025 all rights reserved
-    </div>
-  </footer>
-</main>
+  </div>
+
+  <main>
+    <footer>
+      <div id="eu1">
+        <div id="eu2">
+          <div class="footer-title">
+            <h1>deep web</h1>
+            <h2><em>the joob</em></h2>
+          </div>
+          <div id="social-midia">
+            <a href="#" class="g" id="github"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="g" id="face"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="g" id="ista"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div id="blok">
+            <ul class="list">
+              <li><h3>about the creators</h3></li>
+              <li><a href="#" class="f-link">bruno</a></li>
+              <li><a href="#" class="f-link">luis</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="COPY">
+        &#169; 2025 all rights reserved
+      </div>
+    </footer>
+  </main>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const themeToggle = document.getElementById("themeToggle");
       const learnMoreBtn = document.getElementById("learnMoreBtn");
       const homeLink = document.getElementById("goHome");
       const aboutLink = document.getElementById("goAbout");
+      const toTipsBtn = document.getElementById("toTips");
 
       const homeSection = document.getElementById("home");
+      const sSection = document.getElementById("s");
+      const tipsSection = document.getElementById("tips");
       const aboutSection = document.getElementById("about");
       const body = document.body;
 
-      const showSection = (section) => {
-        homeSection.classList.add("hidden");
-        aboutSection.classList.add("hidden");
-        section.classList.remove("hidden");
-        section.scrollIntoView({ behavior: "smooth" });
+      const allSections = [homeSection, sSection, tipsSection, aboutSection];
+
+      const showSection = (sectionToShow) => {
+        allSections.forEach(section => {
+          if (section) section.style.display = "none";
+        });
+
+        if (sectionToShow) {
+          sectionToShow.style.display = "block";
+          sectionToShow.scrollIntoView({ behavior: "smooth" });
+        }
       };
 
+      
       if (localStorage.getItem("theme") === "dark") {
         body.classList.add("dark-mode");
         themeToggle.textContent = "☀️";
@@ -100,17 +152,22 @@
         localStorage.setItem("theme", isDark ? "dark" : "light");
       });
 
-      learnMoreBtn.addEventListener("click", (e) => {
+      learnMoreBtn?.addEventListener("click", (e) => {
         e.preventDefault();
-        showSection(aboutSection);
+        showSection(sSection);
       });
 
-      homeLink.addEventListener("click", (e) => {
+      toTipsBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        showSection(tipsSection);
+      });
+
+      homeLink?.addEventListener("click", (e) => {
         e.preventDefault();
         showSection(homeSection);
       });
 
-      aboutLink.addEventListener("click", (e) => {
+      aboutLink?.addEventListener("click", (e) => {
         e.preventDefault();
         showSection(aboutSection);
       });
