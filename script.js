@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // Tema: carrega preferência do usuário
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
     themeToggle.textContent = "☀️";
@@ -56,6 +57,5 @@ document.addEventListener("DOMContentLoaded", () => {
     showSection(aboutSection);
   });
 
- 
   showSection(homeSection);
 });
