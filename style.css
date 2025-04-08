@@ -526,6 +526,21 @@ body.dark-mode .about .text h2 {
   0%, 100% {
     transform: translateY(0);
   }
+  @keyframes emojiBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.tip-icon {
+  display: inline-block;
+  font-size: 2rem;
+  animation: emojiBounce 1s infinite ease-in-out;
+}
+
   50% {
     transform: translateY(-10px);
   }
