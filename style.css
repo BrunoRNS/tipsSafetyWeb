@@ -44,14 +44,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.footer-title h1 {
+.footer-title h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-color, #0077cc);
   margin: 0;
 }
 
-.footer-title h2 {
+.footer-title h3 {
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--text-color, #555);
@@ -59,11 +59,11 @@ body {
   font-style: italic;
 }
 
-body.dark-mode .footer-title h1 {
+body.dark-mode .footer-title h2 {
   color: #f1f1df;
 }
 
-body.dark-mode .footer-title h2 {
+body.dark-mode .footer-title h3 {
   color: #ccc;
 }
  
@@ -474,7 +474,7 @@ body:not(.dark-mode) #social-midia .g {
 .about .photo img {
   max-width: 100%;
   height: auto;
-  border-radius: 122px;
+  border-radius: 100%;
 }
 
 
