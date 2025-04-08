@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Be Smart on the Deep Web</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script type="text/javascript" src="script.js">
 </head>
 <body>
 
@@ -40,7 +42,7 @@
         <section class="about">
           <div class="text">
             <h2>Luis Otávio</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum praesentium quam placeat? Quo enim dolores minima maiores quidem in numquam odit odio animi unde, minus reiciendis tempore iste architecto doloremque.
+            <p>I am a cyber security developer, I am skilled in C# and Python development. I program since 2023, and I like ethic hacking with Kali Linux.
             </p>
           </div>
           <div class="photo">
@@ -50,7 +52,7 @@
         <section class="about">
           <div class="text">
             <h2>Bruno RNS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum praesentium quam placeat? Quo enim dolores minima maiores quidem in numquam odit odio animi unde, minus reiciendis tempore iste architecto doloremque.
+            <p>I am a backend Python developer. Experienced in building responsive and dynamic websites using HTML, CSS, JavaScript, Bootstrap, and Django Backend, also optimizing python softwares using C bindings or dynamic libraries.
             </p>
           </div>
           <div class="photo">
@@ -110,18 +112,17 @@
       <div id="footer_main">
         <div id="footer_inside">
           <div class="footer-title">
-            <h1>be smart on</h1>
-            <h2><em>deep web</em></h2>
+            <h1>Be smart on</h1>
+            <h2><em>Deep Web</em></h2>
           </div>
           <div id="social-midia">
-            <a href="#" class="g" id="github"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="g" id="github"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://github.com/BrunoRNS/be_smart_deepweb/" class="g" id="github"><i class="fa-brands fa-github"></i></a>
           </div>
           <div id="blok">
             <ul class="list">
               <li><h3>About the Creators</h3></li>
-              <li><a href="#" class="f-link">Bruno RNS</a></li>
-              <li><a href="#" class="f-link">Luis Otávio</a></li>
+              <li><a href="https://github.com/BrunoRNS/" class="f-link">Bruno RNS</a></li>
+              <li><a href="https://github.com/luisBatis/" class="f-link">Luis Otávio</a></li>
             </ul>
           </div>
         </div>
@@ -131,68 +132,6 @@
       </div>
     </footer>
   </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const themeToggle = document.getElementById("themeToggle");
-      const learnMoreBtn = document.getElementById("learnMoreBtn");
-      const homeLink = document.getElementById("goHome");
-      const aboutLink = document.getElementById("goAbout");
-      const toTipsBtn = document.getElementById("toTips");
-
-      const homeSection = document.getElementById("home");
-      const sSection = document.getElementById("selectable");
-      const tipsSection = document.getElementById("tips");
-      const aboutSection = document.getElementById("about");
-      const body = document.body;
-
-      const allSections = [homeSection, sSection, tipsSection, aboutSection];
-
-      const showSection = (sectionToShow) => {
-        allSections.forEach(section => {
-          if (section) section.style.display = "none";
-        });
-
-        if (sectionToShow) {
-          sectionToShow.style.display = "block";
-          sectionToShow.scrollIntoView({ behavior: "smooth" });
-        }
-      };
-
-      
-      if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        themeToggle.textContent = "☀️";
-      }
-
-      themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        const isDark = body.classList.contains("dark-mode");
-        themeToggle.textContent = isDark ? "☀️" : "🌙";
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-      });
-
-      learnMoreBtn?.addEventListener("click", (e) => {
-        e.preventDefault();
-        showSection(sSection);
-      });
-
-      toTipsBtn?.addEventListener("click", (e) => {
-        e.preventDefault();
-        showSection(tipsSection);
-      });
-
-      homeLink?.addEventListener("click", (e) => {
-        e.preventDefault();
-        showSection(homeSection);
-      });
-
-      aboutLink?.addEventListener("click", (e) => {
-        e.preventDefault();
-        showSection(aboutSection);
-      });
-    });
-  </script>
 
 </body>
 </html>
