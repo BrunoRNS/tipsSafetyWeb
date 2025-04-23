@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <!-- Default configuration for HTML header -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Be Smart on the Deep Web</title>
+
+  <!-- Page's title -->
+  <title>Security tips for Deep Web</title>
+
+  <!-- Include stylesheet from style.css -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Beautiful font for the page from cloudflare -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
 </head>
 <body>
-
+  <!-- navbar links with IDs "goHome" and "goAbout" configured to set the page's content in script.js -->
   <nav class="navbar">
     <ul>
       <li><a href="#" id="goHome">Home</a></li>
@@ -18,13 +26,17 @@
     </ul>
   </nav>
 
+  <!-- Here is the Home content, configured to show initially in the start of the website. Also, the show and hide functionality is in script.js -->
+
   <div id="home" class="content">
     <div class="container">
-      <h1>Be Smart on the Deep Web</h1>
-      <p>Find out how to navigate safely on the deep web! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
+      <h1>Security tips for Deep Web</h1>
+      <p>Find out how to navigate safely on dangerous websites! You can avoid problems and protect your data with some simple strategies. Want to know how? Click "Learn more" and check it out!</p>
       <a href="#" id="learnMoreBtn" class="learn-more">Learn More</a>
     </div>
   </div>
+
+  <!-- The introduction container, with a See Tips button, that open the tips containers -->
 
   <div id="selectable" class="content" style="display: none;">
     <div class="container">
@@ -34,15 +46,17 @@
     </div>
   </div>
 
+  <!-- Here we have all the tips in a container, setted with amazing animation -->
+
   <div id="tips" class="content" style="display: none;">
     <div class="tips-container">
-      <h2 class="tips-title">Be Smart on the Deep Web</h2>
+      <h2 class="tips-title">Security tips for Deep Web</h2>
 
       <div class="tip">
         <div class="tip-icon">📌</div>
         <div>
-          <div class="tip-title">Tip 1 – First of all, avoid deep web</div>
-          <p>Is always better to avoid problems then fighting them. So, only open deep web if you have no more options.</p>
+          <div class="tip-title">Tip 1 – First of all, <b>avoid</b> deep web</div>
+          <p>Is always better to avoid problems then fighting them. So, only open dangerous websites if you have no more options.</p>
         </div>
       </div>
 
@@ -80,14 +94,19 @@
     </div>
   </div>
 
+  <!-- This section is initially hidden, and clicking on the link of the navbar, it's configured to show the creators information -->
+
   <section id="about" class="content" style="display:none;">
     <div class="tips-container">
+      
+      <!-- Maybe some of the creators changed its username so the photo, may not be up to date... -->
+      
       <h2 class="tips-title">Creators</h2>
 
       <section class="about">
         <div class="text">
           <h2>Luis Otávio</h2>
-          <p>I am a cyber security developer, skilled in C# and Python programming. I’ve been programming since 2023 and I'm in ethical hacking with Kali Linux.</p>
+          <p>I am a cyber security developer, skilled in Python programming. I’ve been programming since 2023 and I'm in ethical hacking with Kali Linux.</p>
         </div>
         <div class="photo">
           <img src="https://github.com/luisBatis.png" alt="Luis Otávio photo">
@@ -97,7 +116,7 @@
       <section class="about">
         <div class="text">
           <h2>Bruno RNS</h2>
-          <p>I am a backend developer, experienced in building responsive and dynamic websites with HTML, CSS, JavaScript, and Django. I've been programming since 2020, and I also know about optimizing Python software with C bindings.</p>
+          <p>I am a backend developer, experienced in building responsive and dynamic websites with Django. I've been programming since 2020, and I also know about optimizing Python software with C bindings.</p>
         </div>
         <div class="photo">
           <img src="https://github.com/BrunoRNS.png" alt="Bruno RNS photo">
@@ -106,11 +125,13 @@
     </div>
   </section>
 
+  <!-- Here is the footer, which is configured to show even the containers above hidden or not, with links to the creator of the website, notice that maybe the link may not be up to date -->
+
   <footer>
     <div id="footer_main">
       <div id="footer_inside">
         <div class="footer-title">
-          <h2>Be smart on</h2>
+          <h2>Security tips for</h2>
           <h3><em>Deep Web</em></h3>
         </div>
         <div id="social-media">
@@ -125,11 +146,16 @@
         </div>
       </div>
     </div>
+    
+    <!-- All rights reserved by the owners, under licence MIT -->
+    
     <div id="COPY">
       &#169; 2025 All rights reserved.
     </div>
   </footer>
 
+  <!-- Including the script.js which you can see in the repository's root -->
+  
   <script src="script.js"></script>
 
 </body>
