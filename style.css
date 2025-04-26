@@ -107,27 +107,27 @@ footer {
 }
 
 
-#social-midia a {
+#github {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   font-size: 24px;
-  color: white !important;
-  background-color: transparent;
-  border-radius: 50%;
-  margin: 0 5px;
+  color: white; 
+  background-color: var(--color-neutral-10);  
   text-decoration: none;
+  border-radius: 100%;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 #github:hover {
-  background-color: white !important;
-  color: black !important;
+  background-color: white; 
+  color: var(--color-neutral-10); 
+  transform: scale(1.1); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
-
 #blok {
   display: flex;
   flex-direction: column;
@@ -555,7 +555,13 @@ body:not(.dark-mode) #social-midia .g {
   0%, 100% {
     transform: translateY(0);
   }
-  @keyframes emojiBounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Corrigindo a animação emojiBounce */
+@keyframes emojiBounce {
   0%, 100% {
     transform: translateY(0);
   }
@@ -564,14 +570,9 @@ body:not(.dark-mode) #social-midia .g {
   }
 }
 
+/* Ajustando o .tip-icon para usar apenas uma animação */
 .tip-icon {
   display: inline-block;
   font-size: 2rem;
   animation: emojiBounce 1s infinite ease-in-out;
-}
-
-/* Last configs */
-
-50% {
-    transform: translateY(-10px);
 }
