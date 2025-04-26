@@ -1,14 +1,5 @@
-First of all, avoid deep web
-- Is always better to avoid problems then fighting them. So, only open deep web if you have no more options.
+# WARNING:
 
-Use VPN
-- When opening not trustable sites, use vpn, its a security shield against hackers that try to get you IP to take your passwords
+### **We do not support or offer under any circumstances the use of the deep web, nor do we use it, the use of this term, deep web, is due to the access of untrustworthy websites, and above all we recommend that you do not access them. This software is open source and you have the right to use, copy, modify and commercialize it, but the creators of this software do not offer any warranty for it, and anything you do with this code is at your own risk and we are not responsible for anything you do with this software.**
 
-Never let the untrustable site give you notifications
-- They will spam you, say that your device is infected when it is not, and open pop ups that make you download things that you don’t want and make your device slow
-
-Use Virtual Machine
-- Don’t donwload executables or compressed files (exe, zip, tar.gz, .7z) from not trustable websites, they usually come with a special virus for you, so download them on a virtual machine, access this site for more information: https://www.howtogeek.com/196060/beginner-geek-how-to-create-and-use-virtual-machines/ 
-
-Do not send personal information to untrustable sites
-- It is very important to not share personal information in dangerous websites, they can sell those informations.
+The software is being served by github pages and the link is in the description of the repository.
