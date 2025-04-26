@@ -442,7 +442,23 @@ body.dark-mode .about .text h2 {
 body:not(.dark-mode) #blok a {
   color: #666;
 }
+body:not(.dark-mode) #github{
+  background-color: white; 
+  color: var(--color-neutral-10); 
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 
+}
+body:not(.dark-mode) #github:hover{
+  
+  
+  color: white; 
+  background-color: var(--color-neutral-10);  
+  text-decoration: none;
+  transform: scale(1.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
 body:not(.dark-mode) #blok a:hover {
   color: #7f37c9;
 }
