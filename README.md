@@ -1,5 +1,12 @@
-# WARNING:
+ **Bem-vindo ao tipsSafetyWeb** 🚀
 
-### **We do not support or offer under any circumstances the use of the deep web, nor do we use it, the use of this term, deep web, is due to the access of untrustworthy websites, and above all we recommend that you do not access them. This software is open source and you have the right to use, copy, modify and commercialize it, but the creators of this software do not offer any warranty for it, and anything you do with this code is at your own risk and we are not responsible for anything you do with this software.**
+Este projeto é um exemplo interativo para demonstrar o uso de tecnologias incríveis! Aqui você encontrará informações sobre o projeto, as ferramentas utilizadas e instruções sobre como executá-lo em seu ambiente local.
 
-The software is being served by github pages and the link is in the description of the repository.
+## ℹ️ Sobre o Projeto
+
+O {NomeDOprojeto}é uma aplicação web simples que permite aos usuários criar e visualizar tarefas. Foi desenvolvido com as seguintes tecnologias:
+
+- Linguagem: Python
+- Framework: Flask
+- Banco de Dados: SQLite
+- Front-end: HTML, CSS e JavaScript
