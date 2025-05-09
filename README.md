@@ -4,7 +4,7 @@ Este projeto é um exemplo interativo para demonstrar o uso de tecnologias incr�
 
 ## ℹ️ Sobre o Projeto
 
-O {NomeDOprojeto}é uma aplicação web simples que permite aos usuários criar e visualizar tarefas. Foi desenvolvido com as seguintes tecnologias:
+O tipsSafetyWebé uma aplicação web simples que dá dicas Foi desenvolvido com as seguintes tecnologias:
 
 - Linguagem: Python
 - Framework: Flask
