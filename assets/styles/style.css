@@ -264,7 +264,7 @@ footer {
 
 #home {
   font-family: "Teko", sans-serif;
-  background: url('img.jpg') no-repeat center center fixed;
+  background: url('../img/img.jpg') no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   height: 100vh;
