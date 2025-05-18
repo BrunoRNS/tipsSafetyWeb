@@ -15,7 +15,10 @@
 The repository likely contains:  
 
 - **`README.md`** – Overview and basic security guidelines.  
-- **`/docs`** – Detailed explanations of security concepts.  
+- **`/docs`** – Detailed explanations of security concepts.
+- **`/assets`** - Files used by index.html in the site.
+- **`/tests`** - Test the server - **test.sh** to start the tests, only works in unix systems, python3 must be installed.
+- **`index.html`** - Entry of the site, requires assets/ to work.
 
 ---
 
