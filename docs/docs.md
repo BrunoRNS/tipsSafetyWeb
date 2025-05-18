@@ -1,7 +1,9 @@
 # **Technical Documentation: TipsSafetyWeb - BrunoRNS**  
 
 **Author**: BrunoRNS and Luis Otavio
+
 **Repository**: [GitHub - TipsSafetyWeb](https://github.com/BrunoRNS/TipsSafetyWeb)  
+
 **Purpose**: A static collection of web security tips, best practices, and vulnerability prevention techniques for clients while using internet.  
 
 ---
