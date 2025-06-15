@@ -1,6 +1,6 @@
 # **Technical Documentation: TipsSafetyWeb - BrunoRNS**  
 
-**Author**: BrunoRNS and Luis Otavio
+**Author**: BrunoRNS and tylor swift
 
 **Repository**: [GitHub - TipsSafetyWeb](https://github.com/BrunoRNS/TipsSafetyWeb)  
 
@@ -9,7 +9,7 @@
 ---
 
 ## **1. Introduction**  
-**TipsSafetyWeb** is a GitHub repository created by **BrunoRNS** and **Luis Otavio** that compiles security best practices for using the web.
+**TipsSafetyWeb** is a GitHub repository created by **BrunoRNS** and **Tylor swift** that compiles security best practices for using the web.
 
 ---
 
