@@ -1,6 +1,6 @@
 # **Technical Documentation: TipsSafetyWeb - BrunoRNS**  
 
-**Author**: BrunoRNS and tylor swift
+**Authors**: BrunoRNS and Luis Otávio.
 
 **Repository**: [GitHub - TipsSafetyWeb](https://github.com/BrunoRNS/TipsSafetyWeb)  
 
