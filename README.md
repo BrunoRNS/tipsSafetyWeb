@@ -6,7 +6,7 @@ This project is an interactive example to demonstrate the use of amazing technol
 
 tipsSafetyWeb is a simple web application that provides tips about security on web. It was developed with the following technologies:
 
-- Front-end: HTML, CSS and JavaScript
+- Front-end: HTML, CSS and JavaScript.
 
 ## Docs
 
